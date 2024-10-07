@@ -1,0 +1,24 @@
+<ep-card
+   [headerTemplate]="pressCardHeader"
+   [bodyTemplate]="pressCardBody"
+   [epGesture] = "epGestureModel"
+   (epOnPress)="executePress($event)"
+   (epOnPressRelease)="executePressRelease($event)"
+   (epOnPinchStart)="executePinch($event)"
+   (epOnPinchIn)="executePinch($event)"
+   (epOnPinchOut)="executePinch($event)"
+   (epOnPinchEnd)="executePinchEnd($event)"
+>
+   <ng-template #pressCardHeader>
+   </ng-template>
+   <ng-template #pressCardBody>
+      <div class="ep-gesture-harness">
+         <div>
+          <img class="ep-login" src="./assets/ep-login-bg.png">
+         </div>
+      </div>
+      <div>
+         <span>{{ pressMessage }}</span>
+      </div>
+   </ng-template>
+</ep-card>
